@@ -17,11 +17,59 @@ h1{
     font-weight: 700;
     color:#6e7ea9;
     text-transform: uppercase;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.btn-primary{
+    background-color: #1085e4;
+    border: 1px solid #1085e4;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 30px;
+}
+.btn-primary:hover{
+    background-color: #fff;
+    color: #1085e4;
+}
+.btn-secondary{
+    background-color: #cbdbe8;
+    border: 1px solid #cbdbe8;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 30px;
+}
+.btn-secondary:hover{
+    background-color: #fff;
+    color: #1085e4;
 }
 .btn-free{
     color: #fff;
+    letter-spacing: 1.7px;
     font-weight: 400;
     background-color: #1085e4;
+}
+.btn-info{
+    color: #8085b1;
+    background-color: transparent;
+    border:1px solid #dce1e5;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    padding: 20px 40px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+.btn-gruop a + a{
+    margin-left: 15px;
 }
 .grid h2{
     font-size: 40px;
