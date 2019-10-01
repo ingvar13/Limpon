@@ -56,6 +56,11 @@ h1{
 .page-stat .title-h2 {
     max-width: 500px;
 }
+.page-subscribe .title-h2{
+    color: #fff;
+    margin: 0;
+    margin-bottom: 25px;
+}
 .wrap{
     max-width: 1110px;
     margin: 0 auto;
@@ -108,6 +113,7 @@ h1{
     color: #fff;
     padding: 20px 40px;
     border-radius: 30px;
+    transition: 0.3s;
 }
 .btn-primary:hover{
     background-color:transparent;
@@ -123,6 +129,7 @@ h1{
     color: #fff;
     padding: 20px 40px;
     border-radius: 30px;
+    transition: 0.3s;
 }
 .btn-secondary:hover{
     background-color: #fff;
@@ -144,6 +151,7 @@ h1{
     padding: 20px 40px;
     border-radius: 30px;
     text-transform: uppercase;
+    transition: 0.3s;
 }
 .btn-gruop a + a{
     margin-left: 15px;
@@ -182,6 +190,38 @@ h1{
     flex-basis: 200px;
     height: 69px;
 }
+.grid {
+    display: grid;
+    grid-template-areas: "a b c" "d b c" "d f g" "e f g" "e h h";
+    grid-gap: 35px;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.grid-title{
+    grid-area: a;
+}
+.grid-item-1{
+    grid-area: b;
+}
+.grid-item-2{
+    grid-area: c;
+}
+.grid-item-3{
+    grid-area: d;
+}
+.grid-item-4{
+    grid-area: e;
+}
+.grid-item-5{
+    grid-area: f;
+}
+.grid-item-6{
+    grid-area: g;
+}
+.grid-text{
+    grid-area: h;
+}
 .grid h2{
     font-size: 40px;
     color: #192b59;
@@ -192,15 +232,88 @@ h1{
     color: #1085e4;
     display: block;
 }
+.grid-item{
+    text-align: center;
+    box-shadow: #f4f4f4;
+}
 .grid-item h3{
     font-size: 20px;
     font-weight: 600;
     color: #192b59;
+    margin-bottom: 18px;
 }
 .grid-item a{
     font-size: 14px;
     color: #1085e4;
     font-weight: 600;
+}
+.grid-icon{
+    background-repeat: no-repeat;
+    display: block;
+    height: 92px;
+    background-position: center;
+    margin: 0 auto 36px;
+}
+.grid-icon-1{
+    background-image: url(../images/features_icon_1.png);
+    background-size: 73px 79px;
+}
+.grid-icon-2{
+    background-image: url(../images/features_icon_2.png);
+    background-size: 89px 85px;
+}
+.grid-icon-3{
+    background-image: url(../images/features_icon_3.png);
+    background-size: 73px 83px;
+}
+.grid-icon-4{
+    background-image: url(../images/features_icon_4.png);
+    background-size: 109px 92px;
+}
+.grid-icon-5{
+    background-image: url(../images/features_icon_5.png);
+    background-size:85px 90px;
+}
+.grid-icon-6{
+    background-image: url(../images/features_icon_6.png);
+    background-size: 100px 87px;
+}
+.page-software-icon{
+    display: block;
+    background-image: url(../images/software-icon.png);
+    background-repeat: no-repeat;
+    background-position: -20px 0;
+    width: 117px;
+    height: 98px;
+}
+.page-software-flex{
+    display: flex;
+    justify-content: flex-end;
+}
+.page-software-flex>div {
+    flex-basis: 55%;
+}
+.page-software .title-h2{
+    max-width: 766px;
+    margin-top: 12px;
+    margin-bottom: 26px;
+}
+.page-software-list{
+    margin-top: 30px;
+    height: 323px;
+    overflow: hidden;
+    overflow: scroll;
+}
+.page-software-list dt{
+    font-size: 700;
+    color: #5a6789;
+    margin-bottom: 10px;
+}
+.page-software-list dd{
+    margin-left: 0;
+    margin-bottom: 50px;
+    font-size: 14px;
+    line-height: 1.8;
 }
 .list-stat{
     display: flex;
@@ -291,6 +404,45 @@ h1{
 .box-prise-item.active::after{
     display: none;
 }
+.box-subscribe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-subscribe-text{
+    font-size: 18px;
+    max-width: 437px;
+}
+.box-subscribe-user{
+    position: relative;
+}
+.box-subscribe-child{
+    flex-basis: 49%;
+}
+.box-subscribe-user input{
+    border: 2px solid #3f5cb1;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 45px;
+    background-color: transparent;
+    padding: 25px 230px 25px 37px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.box-subscribe-user .btn-primary{
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    padding: 17px 50px;
+}
+.box-subscribe-user input:focus, .box-subscribe-user .btn-primary{
+    outline: none;
+}
+.box-subscribe-user input::-webkit-input-placeholder{color: #b1c3ee}
+.box-subscribe-user input::-moz-input-placeholder   {color: #b1c3ee}
+.box-subscribe-user input:-moz-input-placeholder    {color: #b1c3ee}
+.box-subscribe-user input:-webkit-placeholder       {color: #b1c3ee}
 /*  PAGE */ 
 .page-header{
     position: relative;
@@ -314,10 +466,15 @@ h1{
 .page-plane, .page-screen{
     text-align: center;
 }
+.page-software{
+    padding: 109px 0 156px 0;
+}
 .page-screen{
     padding: 116px 0 0 0;
 }
 .page-subscribe{
+    padding: 25px 0 28px 0;
+    color: #fff;
     background: rgba(10,32,144,1);
     background: -moz-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10,32,144,1)), color-stop(100%, rgba(35,120,205,1)));
