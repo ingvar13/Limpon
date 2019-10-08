@@ -61,6 +61,9 @@ h1{
     margin: 0;
     margin-bottom: 25px;
 }
+.content-app.title-h2{
+    margin-bottom: 36px;
+}
 .wrap{
     max-width: 1110px;
     margin: 0 auto;
@@ -234,7 +237,9 @@ h1{
 }
 .grid-item{
     text-align: center;
-    box-shadow: #f4f4f4;
+    border-radius: 10px;
+    box-shadow:0 9px 20px #f4f4f4;
+    padding: 40px 29px 64px;
 }
 .grid-item h3{
     font-size: 20px;
@@ -278,11 +283,11 @@ h1{
     background-image: url(../images/features_icon_6.png);
     background-size: 100px 87px;
 }
-.page-software-icon{
+.settings-icon{
     display: block;
-    background-image: url(../images/software-icon.png);
+    background-image: url(../images/settings-icon.png);
     background-repeat: no-repeat;
-    background-position: -20px 0;
+    background-position: -10px 0;
     width: 117px;
     height: 98px;
 }
@@ -291,9 +296,9 @@ h1{
     justify-content: flex-end;
 }
 .page-software-flex>div {
-    flex-basis: 55%;
+    flex-basis: 45%;
 }
-.page-software .title-h2{
+.page-software .title-h2 .page-analytics .title-h2{
     max-width: 766px;
     margin-top: 12px;
     margin-bottom: 26px;
@@ -302,18 +307,84 @@ h1{
     margin-top: 30px;
     height: 323px;
     overflow: hidden;
-    overflow: scroll;
+    overflow-y: scroll;
 }
+
+.page-software-list::-webkit-scrollbar {width: 4px; height: 4px;}
+.page-software-list::-webkit-scrollbar-button {background-color: #1085e4;}
+.page-software-list::-webkit-scrollbar-track-piece {background-color: #f3f6ff;}
+.page-software-list::-webkit-scrollbar-thumb {height: 50px; background-color: #1085e4; border-radius: 10px;}
+
 .page-software-list dt{
     font-size: 700;
     color: #5a6789;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 }
 .page-software-list dd{
     margin-left: 0;
     margin-bottom: 50px;
     font-size: 14px;
     line-height: 1.8;
+}
+.page-app-text{
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #c4d2dd;
+    margin-top: 27px;
+    margin-bottom: 20px;
+    letter-spacing: 3.5px;
+}
+.page-app-list>li{
+    display:inline-block;
+}
+
+.page-app-list{
+    padding: 0;
+    list-style-type: none;
+    margin-left: -7px;
+}
+.page-app-list>li>a{
+    background-image: url(../images/app.png);
+    display: block;
+    width: 162px;
+    height: 55px;
+}
+.page-app-list>li>a.page-app-android{
+    background-position: 0 0;
+}
+.page-app-list>li>a.page-app-ios{
+    background-position: -180px 0;
+}
+.video-app{
+    position: absolute;
+    top:-61px;
+    right: -171px;
+}
+.flex-analytics>div{
+    flex-basis: 53%;
+}
+.flex-analytics{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-control>div{
+    flex-basis: 53%;
+}
+.flex-control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page-analytics-text{
+    margin-bottom: 54px;
+}
+.page-control-text{
+    margin-bottom: 54px;
+}
+.content-app{
+    width: 55%;
 }
 .list-stat{
     display: flex;
@@ -443,16 +514,60 @@ h1{
 .box-subscribe-user input::-moz-input-placeholder   {color: #b1c3ee}
 .box-subscribe-user input:-moz-input-placeholder    {color: #b1c3ee}
 .box-subscribe-user input:-webkit-placeholder       {color: #b1c3ee}
+
+.box-clients{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 63px;
+}
+.box-clients-item{
+    background-color: #fff;
+    padding: 21px 42px;
+    border-radius: 10px;
+    flex-basis: 31.5%;
+    box-shadow:0 9px 20px #f4f4f4;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.box-clients-item>p{
+    margin-bottom: 4px;
+}
+.box-clients-item .name{
+    font-size: 22px;
+    font-weight: 600;
+    color: #000958;
+    margin-bottom: 0;
+    letter-spacing: -0.6;
+    line-height: 1.1;
+}
+.box-clients-item .position{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #1085e4;
+    margin-top: 0;
+}
+.box-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.box-info>div{
+    padding-left: 17px;
+}
 /*  PAGE */ 
 .page-header{
     position: relative;
     background-image: url(../images/header_bg.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 53px 0 330px 0;
 }
 .page-compay{
     background-image: url(../images/bg-company.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 106px 0 99px;
@@ -466,8 +581,21 @@ h1{
 .page-plane, .page-screen{
     text-align: center;
 }
+.software-pic{
+    display: block;
+    background-image: url(../images/software-pic.png);
+    background-size: 100% 100%;
+    background-position: 0 0;
+    position: absolute;
+    width: 850px;
+    height: 986px;
+    left: -15px;
+    bottom: -39px;
+}
 .page-software{
     padding: 109px 0 156px 0;
+    position: relative;
+    overflow: hidden;
 }
 .page-screen{
     padding: 116px 0 0 0;
@@ -483,4 +611,47 @@ h1{
     background: -ms-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     background: linear-gradient(135deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2090', endColorstr='#2378cd', GradientType=1 );
+}
+.page-app{
+    padding: 69px 0 82px 0;
+}
+.page-app .wrap{
+    position: relative;
+}
+.page-analytics{
+    background-image: url(../images/br-analytics.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 117px 0 137px 0;
+}
+.page-control{
+    background-image: url(../images/br-control.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 117px 0 137px 0;
+}
+.page-clients{
+    position: relative;
+    margin-top: 120px;
+    padding: 43px 0 0 0;
+}
+.page-clients::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/vektor.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.page-clients .title-40{
+    color:  #fff;
+}
+.page-clients .title-40 span{
+    color:  #85c8ff;
 }
